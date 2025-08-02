@@ -6,6 +6,10 @@ const port = 3000;
 //dico ad express di utilizzare la cartella public
 app.use(express.static('public'));
 
+//importo il file router per i post
+const postRouter = require('./routers/routerPosts.js');
+
+app.use('/posts', postRouter);
 
 app.get('/', (req, res) => {
   console.log('Server del mio blog');
