@@ -7,7 +7,7 @@ const port = 3000;
 app.use(express.static('public'));
 
 //importo il file router per i post
-const postRouter = require('./routers/routerPosts.js');
+const postRouter = require('./routers/posts.js');
 
 app.use('/posts', postRouter);
 
